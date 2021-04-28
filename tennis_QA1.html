@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        /*.ans1 {
+            color: green;
+        }
+
+        p {
+            color: red;
+        }
+
+        label {
+            color: green;
+        }
+
+        body {
+           margin-left:100px;
+        
+        }*/
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>
+        <span style="color:brown ;font-style: italic;font-size:larger"></span>  <span style="color:brown ;font-style: italic;font-size:larger">Happy Mother's Day</span>
+        <img src="images/vase3.png" >
+    </h1>
+
+    <!--<img src="images/vase3.png" alt="data">-->
+
+    <div class="container">
+        <div *ngIf="showdata">
+            <h2 id="win"></h2>
+            <h1 id="result"></h1>
+        </div>
+        <h1>
+            Quiz
+        </h1>
+        <h1 id="result"></h1>
+        <FORM id="testform">
+            <div class="form-group">
+
+                <div id="question1">
+
+                    <p class="question1">1. What is a "serve" in tennis?</p>
+                    <input type="radio" name="question1" value="a" name="ans1" ngModel />
+                    <label>Ball hit to start the a game.</label>
+                    <input type="radio" name="question1" value="b" name="ans1" ngModel />
+                    <label>Refreshment Break</label>
+                    <input type="radio" name="question1" value="c" name="ans1" ngModel />
+                    <label>Rest Break</label>
+                    <input type="radio" name="question1" value="d" name="ans1" ngModel />
+                    <label>Warning</label>
+                </div>
+                <br />
+                <div id="question2">
+
+                    <p class="question2">2. What is a "let" in tennis?</p>
+                    <input type="radio" name="question2" value="a" name="ans2" ngModel />
+                    <label>Signal for ball in.</label>
+                    <input type="radio" name="question2" value="b" name="ans2" ngModel />
+                    <label>Signal for time out.</label>
+                    <input type="radio" name="question2" value="c" name="ans2" ngModel />
+                    <label>Ball hit the net and fall into correct server box.</label>
+                    <input type="radio" name="question2" value="d" name="ans2" ngModel />
+                    <label>Request for new balls.</label>
+                </div>
+                <br />
+
+                <div id="question3">
+
+                    <p class="question3">3. When is the tennis ball out?</p>
+                    <input type="radio" name="question3" value="a" name="ans3" ngModel />
+                    <label>When it touches the line</label>
+                    <input type="radio" name="question3" value="b" name="ans3" ngModel />
+                    <label>When inside the line.</label>
+                    <input type="radio" name="question3" value="c" name="ans3" ngModel />
+                    <label>When outside the line.</label>
+                    <input type="radio" name="question3" value="d" name="ans3" ngModel />
+                    <label>All of the above</label>
+                </div>
+                <br />
+
+                <div id="question4">
+                    <p class="question4">
+                        4. Where do you stand to serve?
+                    </p>
+                    <input type="radio" name="question4" value="a" name="ans4" ngModel />
+                    <label>Behind the baseline.</label>
+                    <input type="radio" name="question4" value="b" name="ans4" ngModel />
+                    <label>Inside the baseline.</label>
+                    <input type="radio" name="question4" value="c" name="ans4" ngModel />
+                    <label>On the baseline.</label>
+                    <input type="radio" name="question4" value="d" name="ans4" ngModel />
+                    <label>None of the above.</label>
+                </div>
+                <br />
+
+                <div id="question5">
+                    <p class="question5">5. Which is a correct score?</p>
+                    <input type="radio" name="question5" value="a" name="ans5" ngModel />
+                    <label>30 35 40 game</label>
+                    <input type="radio" name="question5" value="b" name="ans5" ngModel />
+                    <label>love 30 40 game</label>
+                    <input type="radio" name="question5" value="c" name="ans5" ngModel />
+                    <label>15 30 40 game</label>
+                    <input type="radio" name="question5" value="d" name="ans5" ngModel />
+                    <label>5 10 15 game</label>
+                </div>
+                <br />
+
+                <div id="question6">
+                    <p class="question6">6. What is "spin" on a ball?</p>
+                    <input type="radio" name="question6" value="a" name="ans6" ngModel />
+                    <label>Hitting directly into the ball.</label>
+                    <input type="radio" name="question6" value="b" name="ans6" ngModel />
+                    <label>Hitting up and over the top of ball.</label>
+                    <input type="radio" name="question6" value="c" name="ans6" ngModel />
+                    <label>Good placement of the ball.</label>
+                    <input type="radio" name="question6" value="d" name="ans6" ngModel />
+                    <label>Pace and direction of the ball.</label>
+                </div>
+                <br />
+
+                <div id="question7">
+                    <p class="question7">7. Ball lands on the line:</p>
+                    <input type="radio" name="question7" value="a" name="ans7" ngModel />
+                    <label>Ball is out of bounds.</label>
+                    <input type="radio" name="question7" value="b" name="ans7" ngModel />
+                    <label>Ball is in bounds.</label>
+                    <input type="radio" name="question7" value="c" name="ans7" ngModel />
+                    <label>Up to closes player to determine.</label>
+                    <input type="radio" name="question7" value="d" name="ans7" ngModel />
+                    <label>None of the above.</label>
+                </div>
+                <br />
+
+                <div id="question8">
+                    <p class="question8">8. Which is not a tennis boundry line?</p>
+                    <input type="radio" name="question8" value="a" name="ans8" ngModel />
+                    <label> Baseline</label>
+                    <input type="radio" name="question8" value="b" name="ans8" ngModel />
+                    <label>Singles' sideline</label>
+                    <input type="radio" name="question8" value="c" name="ans8" ngModel />
+                    <label>Doubles' sideline</label>
+                    <input type="radio" name="question8" value="d" name="ans8" ngModel />
+                    <label>Netline</label>
+                </div>
+                <br />
+
+                <div id="question9">
+                    <p class="question9">9. Serve is a stroke to start a point:</p>
+                    <input type="radio" name="question9" value="a" name="ans9" ngModel />
+                    <label>True</label>
+                    <input type="radio" name="question9" value="b" name="ans9" ngModel />
+                    <label>False</label>
+                </div>
+                <br />
+
+                <div id="question10">
+                    <p class="question10">10. Tennis cannot be played:</p>
+                    <input type="radio" name="question10" value="a" name="ans10"  />
+                    <label>In the rain</label>
+                    <input type="radio" name="question10" value="b" name="ans10"  />
+                    <label>On windy days.</label>
+                    <input type="radio" name="question10" value="c" name="ans10"  />
+                    <label>On dry courts.</label>
+                    <input type="radio" name="question10" value="d" name="ans10" />
+                    <label>In hot weather.</label>
+                </div>
+                <br>
+                <br />
+                <!--</div>  -->
+                <br />
+
+                <INPUT TYPE="button" NAME="button" Value="Click"
+                       onClick="testButton(this.form)"> <BR>
+        </FORM> <br>
+
+        <button onclick="myAnswer()">Answer</button>
+    </div>
+    <script>
+
+        function myAnswer() {
+            alert("acca ccbd aa");
+        }
+
+        function testButton(form) {
+
+            for (Count = 0; Count < 3; Count++) {
+                if (form.question1[Count].checked)
+                    break;
+            }
+            //alert ("Button " + Count + " is selected");
+            // alert (form.question1[Count].value);
+
+
+            for (Count1 = 0; Count1 < 3; Count1++) {
+                if (form.question2[Count1].checked)
+                    break;
+            }
+            // alert ("Button " + Count1 + " is selected");
+            // alert (form.question2[Count1].value);
+
+
+            for (Count2 = 0; Count2 < 3; Count2++) {
+                if (form.question3[Count2].checked)
+                    break;
+            }
+            //alert ("Button " + Count2 + " is selected");
+            // alert (form.question3[Count2].value);
+
+
+
+            for (Count3 = 0; Count3 < 3; Count3++) {
+                if (form.question4[Count3].checked)
+                    break;
+            }
+            // alert ("Button " + Count3 + " is selected");
+            // alert (form.question4[Count3].value);
+
+
+            for (Count4 = 0; Count4 < 3; Count4++) {
+                if (form.question5[Count4].checked)
+                    break;
+            }
+            //  alert ("Button " + Count4 + " is selected");
+            //  alert (form.question5[Count4].value);
+
+
+            for (Count5 = 0; Count5 < 3; Count5++) {
+                if (form.question6[Count5].checked)
+                    break;
+            }
+            //  alert ("Button " + Count5 + " is selected");
+            //  alert (form.question6[Count5].value);
+
+
+
+
+            for (Count6 = 0; Count6 < 3; Count6++) {
+                if (form.question7[Count6].checked)
+                    break;
+            }
+            //  alert ("Button " + Count6 + " is selected");
+            //  alert (form.question7[Count6].value);
+
+
+
+            for (Count7 = 0; Count7 < 3; Count7++) {
+                if (form.question8[Count7].checked)
+                    break;
+            }
+            //   alert ("Button " + Count7 + " is selected");
+            //   alert (form.question8[Count7].value);
+
+
+
+
+            for (Count8 = 0; Count8 < 3; Count8++) {
+                if (form.question9[Count8].checked)
+                    break;
+            }
+            //  alert ("Button " + Count8 + " is selected");
+            //   alert (form.question9[Count8].value);
+
+
+
+            for (Count9 = 0; Count9 < 3; Count9++) {
+                if (form.question10[Count9].checked)
+                    break;
+            }
+            //   alert ("Button " + Count9 + " is selected");
+            //   alert ("my 10th value:" + form.question10[Count9].value);
+
+            var answerString = "";
+            var answers = "";
+            answerString = answerString + form.question1[Count].value;
+            answerString = answerString + form.question2[Count1].value;
+            answerString = answerString + form.question3[Count2].value;
+            answerString = answerString + form.question4[Count3].value;
+            answerString = answerString + form.question5[Count4].value;
+            answerString = answerString + form.question6[Count5].value;
+            answerString = answerString + form.question7[Count6].value;
+            answerString = answerString + form.question8[Count7].value;
+            answerString = answerString + form.question9[Count8].value;
+            answerString = answerString + form.question9[Count9].value;
+            alert(answerString);
+
+
+            var ans1 = document.querySelectorAll('#testform input[type="radio"]:checked');
+            var answerString = "";
+            var answers = "";
+
+            for (var i = 0; i < ans1.length; i++) {
+                answerString = answerString + ans1[i].value;
+            }
+
+            if (parseInt(answerString, 16) === 742136790442) {
+                //alert("Great JOB:" + answerString);
+
+                // *** music and cheers ***
+
+                var musicMenu6 = new Audio("/music/quizmusic.wav");
+
+
+
+
+                //var musicMenu6 = new Audio("https://vgdstore.blob.core.windows.net/videos/quizmusic.wav");
+                musicMenu6.id = "dr8sound";
+                musicMenu6.src;
+                musicMenu6.seeking;
+                musicMenu6.loop = false;
+                musicMenu6.play();
+                 document.getElementById("win").innerHTML = "You Win!";
+                 document.getElementById("win").style.color = "lightblue";
+                 document.getElementById("result").innerHTML = "Congragulation!";
+                 document.getElementById("result").style.color = "magenta";
+            }
+            else {
+                alert("Please Try Again, Incorrect Answer String:" + answerString);
+                //this.showdata = false;
+            }
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
